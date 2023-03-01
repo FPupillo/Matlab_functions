@@ -1,0 +1,107 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./Matlab_functions_images/} }
+
+\begin{document}
+
+\begin{par}
+\begin{flushleft}
+Matlab functions
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+% concatenate strings and numbers
+a = 2;
+newVar = ['a' num2str(a)];
+newVar
+\end{matlabcode}
+\begin{matlaboutput}
+newVar = 'a2'
+\end{matlaboutput}
+
+
+\begin{par}
+\begin{flushleft}
+Get a variable from a string
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+a2 = 100;
+\end{matlabcode}
+\begin{matlaboutput}
+a2 = 100
+\end{matlaboutput}
+\begin{matlabcode}
+b = eval('a2');
+b
+\end{matlabcode}
+\begin{matlaboutput}
+b = 100
+\end{matlaboutput}
+
+
+\begin{par}
+\begin{flushleft}
+turn a cell array into a string array
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+% Create a cell array
+myCell = {'a';'b';'c'}
+\end{matlabcode}
+\begin{matlaboutput}
+myCell = 3x1 cell    
+'a'         
+'b'         
+'c'         
+
+\end{matlaboutput}
+\begin{matlabcode}
+
+% turn it into a string
+myCell_str= string(myCell)
+\end{matlabcode}
+\begin{matlaboutput}
+myCell_str = 3x1 string    
+"a"         
+"b"         
+"c"         
+
+\end{matlaboutput}
+\begin{matlabcode}
+
+% concatenate the three element in one single element
+myCell_str_sing = strjoin(myCell_str, '_')
+\end{matlabcode}
+\begin{matlaboutput}
+myCell_str_sing = "a b c"
+\end{matlaboutput}
+\begin{matlabcode}
+
+% this is a string array (double quotes)
+% to convert it to a character vector run the following
+myCell_char = char(myCell_str_sing)
+
+\end{matlabcode}
+
+\end{document}
